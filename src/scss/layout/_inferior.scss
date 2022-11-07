@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@include tablet {
+    .seccion-inferior {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.informacion-meta {
+    span {
+        color: $amarillo;
+    }
+}
+
+.texto-entrada {
+    a {
+        color: $negro;
+        margin-top: 10rem;
+        display: block;
+        //los enlaces son display inlane y no aplican lso margenes, jau que modificarlos asi
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+
+    h4 {
+        margin: 0;
+        line-height: 1.4;
+        &::after {
+            content: '';
+            display: block;
+            width: 15rem;
+            height: .5rem;
+            background-color: $verde;
+            margin-top: 1rem; 
+        }
+    }
+
+    span {
+        color: $amarillo;
+    }
+     
+
+}
+

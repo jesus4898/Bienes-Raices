@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+.boton-amarillo {
+    @include boton(v.$amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+    @include boton(v.$amarillo, block);
+}
+
+.boton-verde {
+    @include boton(v.$verde, inline-block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, block);
+    width: 100%
+}
+
+.boton-azul-block {
+    @include boton($azul, block); 
+}
